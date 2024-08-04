@@ -1,15 +1,15 @@
-import Image from "next/image";
+import About from "@/components/overview/about";
+import FullStory from "@/components/overview/full-story";
+import Hero from "@/components/overview/hero";
 
 export default function Home() {
+  
   return (
-    <main>
-      <section>
-        <h1>Greeting Hero with animations</h1>
-      </section>
-      <section>
-        <h1>About me</h1>
-      </section>
-      <section>
+    <main> 
+      <Hero/>
+      <About/>
+      <FullStory/>
+      {/* <section>
         <h1>Main tech skills</h1>
       </section>
       <section>
@@ -20,7 +20,7 @@ export default function Home() {
       </section>
       <section>
         <h1>Showcase</h1>
-      </section>
+      </section> */}
     </main>
   );
 }

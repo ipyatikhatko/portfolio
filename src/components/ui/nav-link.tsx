@@ -17,16 +17,11 @@ function NavLink(props: Props) {
   const isActive = pathname == href 
 
   return (
-    <Button 
-      variant='link' 
-      className={clsx(
-        '',
-        {
-          'underline decoration-teal-400' : isActive
-        }
-      )}>
-      <Link href={href}>{children}</Link>
-    </Button>
+    <Link className='flex-1' href={href}>
+      <Button className='w-full' variant={isActive ? 'default' : 'link'}>
+        {children}
+      </Button>
+    </Link>
   )
 }
 
