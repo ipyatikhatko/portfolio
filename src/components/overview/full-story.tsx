@@ -4,6 +4,8 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import React from 'react'
 import Typewriter from '../typewrite'
+import { Button } from '../ui/button'
+import Link from 'next/link'
 
 gsap.registerPlugin(ScrollTrigger) 
 
@@ -38,18 +40,16 @@ function FullStory(props: Props) {
   }, [])
 
   return (
-    <section id='story' className='relative min-h-screen pb-[50vh] bg-gradient-to-t from-slate-400 dark:from-slate-800 to-transparent'>
+    <section id='story' className='relative min-h-screen pb-[50vh] bg-gradient-to-t from-background-b dark:from-background-dark-b to-transparent'>
       <div className='h-full max-w-screen-md mx-auto my-0 px-4 sm:px-8'>
-        <Typewriter
-          id='story-title' 
-          tweenVars={{ 
+        <Typewriter id='story-heading'
+          tweenVars={{
             scrollTrigger: {
-              trigger: '#story-title',
+              trigger: '#story-heading',
               start: 'top 80%',
               end: 'bottom 40%',
               scrub: true,
             },
-
           }} 
           className='!p-0 mb-4 uppercase font-bold text-2xl md:text-4xl -tracking-wide'
           >
@@ -86,11 +86,11 @@ function FullStory(props: Props) {
           <p className='paragraph'>
               After completing a couple of interviews, I received an offer from a great and friendly company with a nice tech stack.
           </p>
-          <h3 className='w-fit px-2 bg-black text-white dark:bg-white dark:text-black'>24.02.2022</h3>
+          <h3 className='w-fit px-2 bg-black text-white dark:bg-white dark:text-black'>24.02.2022 💔</h3>
           <p className='paragraph'>
               That was planned as my first day to start working...
-              And the day started earlier for many Ukrainians. We were awakened by the sounds of explosions from missile attacks by Russia. It was like waking up in a nightmare, and it continues.  
-            <a className='bg-orange-400 underline text-white px-2' href="https://supportukrainenow.org/">Support Ukraine now</a>
+              And the day started earlier for many Ukrainians. We were awakened by the sounds of explosions from missile attacks by Russia. It was like waking up in a nightmare, and it continues.  <br />
+            <a className='bg-green-400 rounded-sm underline text-green-700 px-2' href="https://supportukrainenow.org/">Support Ukraine</a>
           </p>
           <p className='paragraph'>
               The company reached out to me and rescheduled my start date until the environment was safer and calmer, which was very supportive. They didn&apos;t withdraw the offer and kept their word. Once the situation stabilized, I started working remotely. Initially, I was on the bench waiting for a project, and the Team Lead mentored me with a pet project to keep me engaged, which was really nice.
@@ -100,8 +100,13 @@ function FullStory(props: Props) {
           </p>
           <p className='paragraph'>
               From these experiences, I have developed a list of my main technologies that I truly enjoy working with.
+              I enjoy creative stuff, and projects that helps people and make world a better place.
           </p>
-
+        </div>
+        <div className='flex justify-center items-center mt-4'>
+          <Link href={'/cv'}>
+            <Button>Check out my CV</Button>
+          </Link>
         </div>
       </div>
     </section>

@@ -40,22 +40,21 @@ function About(props: Props) {
   return (
     <section id='about' className='relative py-20'>
       <div className='h-full max-w-screen-md mx-auto my-0 px-4 sm:px-8'>
-        <Typewriter
-          id='about-title' 
+        <Typewriter 
+          id='about-heading'
           tweenVars={{ 
             scrollTrigger: {
-              trigger: '#about-title',
+              trigger: '#about-heading',
               start: 'top 80%',
               end: 'bottom 40%',
               scrub: true,
             },
-
           }} 
           className='!p-0 mb-4 uppercase font-bold text-2xl md:text-4xl -tracking-wide'
           >
             About me
           </Typewriter>
-        <div id='about-content' className='tracking-wide'>
+        <div id='about-content' className='tracking-wide p-2'>
           <p className='paragraph'>I am a passionate and dedicated <b>React/Next.js</b> front-end developer with over <b>4 years of experience</b> in creating <b>dynamic</b> and <b>responsive</b> web applications. My expertise lies in crafting seamless user experiences and bringing innovative designs to life using modern JavaScript frameworks.</p>
           <br />
           <p className='paragraph'>Throughout my career, I have honed my skills in front-end development, focusing on building <b>robust and scalable applications</b>. I thrive in collaborative environments and enjoy working closely with designers and back-end developers to deliver <b>high-quality</b> projects.</p>

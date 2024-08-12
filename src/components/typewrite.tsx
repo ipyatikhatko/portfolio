@@ -1,4 +1,5 @@
 'use client'
+import { getUID } from '@/lib/utils';
 import { useGSAP } from '@gsap/react';
 import clsx from 'clsx';
 import gsap from 'gsap';
@@ -18,13 +19,13 @@ function Typewriter(props: Props) {
   useGSAP(() => {
     gsap.to(
       `#${id} > span`,
-      { 
-        display: 'inline', 
+      {
+        display: 'inline',
         stagger: 0.1, 
         onStart: () => {
           setStart(true)
         },
-        ...tweenVars 
+        ...tweenVars
       },
     )
   }, [])
@@ -41,9 +42,9 @@ function Typewriter(props: Props) {
 
   return (
     <div 
-      id={id} 
+      id={id}
       className={clsx(
-        'bg-white text-black dark:bg-black dark:text-white w-fit font-mono', 
+        'bg-white text-black dark:bg-black dark:text-white w-fit font-mono select-none cursor-default', 
         start && 'p-2',
         className
       )}

@@ -16,6 +16,7 @@
 @layer components {
 
   .paragraph {
+    @apply bg-white/30 dark:bg-black/30 backdrop-blur-sm rounded-md p-2;
     b {
       @apply bg-black/80 text-white dark:bg-white/80 dark:text-black;
       @apply font-normal !px-2;
