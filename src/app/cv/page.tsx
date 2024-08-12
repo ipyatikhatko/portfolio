@@ -1,12 +1,16 @@
-import React from 'react'
+'use client'
+import { useTheme } from 'next-themes'
+import dynamic from 'next/dynamic';
+import React, { useState } from 'react'
+const PdfViewerComponent = dynamic(() => import("../../components/cv/pdf-viewer"), { ssr: false, });
 
-interface Props {}
 
-function CVPage(props: Props) {
-  const {} = props
-
+function CVPage() {
+  
   return (
-    <h1>CV (readable) + PDF file</h1>
+    <section className='px-4 w-full py-28'>
+      <PdfViewerComponent/>
+    </section>
   )
 }
 
