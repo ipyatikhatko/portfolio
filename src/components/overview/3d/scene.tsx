@@ -2,9 +2,9 @@
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import React, { useEffect, useRef } from 'react'
 import { Color, Vector3 } from 'three'
-import Core from '../core'
-import CoreOuter from '../core-outer'
-import { Particles } from '../particles'
+import Core from './core'
+import CoreOuter from './core-outer'
+import { Particles } from './particles'
 
 function CameraController() {
   const { camera } = useThree();
