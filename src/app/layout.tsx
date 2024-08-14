@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Providers from "@/providers";
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Poppins({ subsets: ["latin"], weight: ['400', '500', '600', '700'] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
         <Providers>
           <Navbar/>
           {children}
+          <Analytics/>
         </Providers>
       </body>
     </html>
